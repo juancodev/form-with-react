@@ -1,0 +1,55 @@
+@use 'vars';
+
+.form {
+  width: 300px;
+  height: 475px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  border: 1px solid vars.$button;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.form_input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-family: vars.$label-font;
+  font-size: vars.$md;
+  font-weight: 400;
+  color: vars.$text-label-color;
+}
+
+input {
+  border-radius: 3px;
+  padding: 8px 0;
+  border: 1px solid vars.$button;
+}
+
+button {
+  background-color: vars.$button;
+  color: vars.$white;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-family: vars.$label-font;
+  font-size: vars.$md;
+  font-weight: bold;
+  border: 1px solid vars.$button;
+  cursor: pointer;
+}
+
+// .iti__flag {
+//   background-image: url("path/to/flags.png");
+// }
+
+// @media (-webkit-min-device-pixel-ratio: 2),
+// (min-resolution: 192dpi) {
+//   .iti__flag {
+//     background-image: url("path/to/flags@2x.png");
+//   }
+// }
