@@ -2,14 +2,22 @@
 
 .form {
   width: 300px;
-  height: 500px;
+  height: 315px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 40px;
   border: 1px solid vars.$button;
   border-radius: 10px;
   background-color: #f7f7f7;
+}
+
+.title-form {
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  font-size: vars.$title;
 }
 
 .form_input {
@@ -41,4 +49,8 @@ button {
   font-weight: bold;
   border: 1px solid vars.$button;
   cursor: pointer;
+}
+
+.signup {
+  color: black;
 }

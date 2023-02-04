@@ -8,7 +8,7 @@ const useGetInfo = (domain, token) => {
   React.useEffect(() => {
     setTimeout(() => {
       const countryFlag = async () => {
-        const info = await axios(domain + 'json?' + token);
+        const info = await axios(domain + 'json?token=' + token);
         console.log(info);
         const currentCountry = info.data.country;
         setLocation(currentCountry.toLowerCase());
