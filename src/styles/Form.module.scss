@@ -53,3 +53,28 @@ button {
   border: 1px solid vars.$button;
   cursor: pointer;
 }
+
+@media (max-width: 640px) {
+  .form {
+    padding: 25px
+  }
+
+  .title-form {
+    font-size: vars.$md;
+  }
+
+  label {
+    width: 50%;
+    font-size: 16px;
+  }
+
+  .form_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  button {
+    width: 50%;
+  }
+}

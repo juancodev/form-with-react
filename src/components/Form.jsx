@@ -122,13 +122,16 @@ const Form = () => {
           />
         </div>
 
-        <button type='submit'>Register</button>
+        <div className={styles['form_button']}>
+          <button type='submit'>Register</button>
+        </div>
 
         <NavLink
           style={({ isActive }) => (isActive) ? { color: 'blue' } : {
             color: '#acd9b2',
             textDecoration: 'none',
-            marginTop: '2px'
+            marginTop: '2px',
+            textAlign: 'center'
           }}
           to="/login">
           You have an account?

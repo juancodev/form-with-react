@@ -40,7 +40,12 @@ input {
   border: 1px solid vars.$button;
 }
 
+input:focus {
+  outline: 1px solid #52b788;
+}
+
 button {
+  width: 100%;
   background-color: vars.$button;
   color: vars.$white;
   padding: 10px 0;
@@ -64,4 +69,28 @@ button {
 .error_p {
   font-size: vars.$md;
   color: vars.$white;
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 25px
+  }
+
+  .title-form {
+    font-size: vars.$md;
+  }
+
+  label {
+    width: 50%;
+    font-size: 16px;
+  }
+
+  .form_button {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    width: 50%;
+  }
 }

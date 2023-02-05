@@ -46,13 +46,16 @@ const FormLogin = () => {
           <input type="password" id="password" required />
         </div>
 
-        <button type='submit'>Login</button>
+        <div className={styles['form_button']}>
+          <button type='submit'>Login</button>
+        </div>
 
         <NavLink
           style={({ isActive }) => (isActive) ? { color: 'blue' } : {
             color: '#acd9b2',
             textDecoration: 'none',
-            marginTop: '2px'
+            marginTop: '2px',
+            textAlign: 'center'
           }}
           to="/signup">
           Don't have an account?
