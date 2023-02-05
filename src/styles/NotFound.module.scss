@@ -1,0 +1,11 @@
+@use 'vars';
+
+.divImage {
+  display: flex;
+  justify-content: center;
+}
+
+.notFoundImage {
+  width: 55%;
+  height: 70%;
+}

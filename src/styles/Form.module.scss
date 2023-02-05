@@ -2,7 +2,7 @@
 
 .form {
   width: 300px;
-  height: 500px;
+  height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +10,15 @@
   border: 1px solid vars.$button;
   border-radius: 10px;
   background-color: #f7f7f7;
+}
+
+.title-form {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: vars.$title;
+  margin: -8px;
 }
 
 .form_input {
@@ -26,6 +35,8 @@ label {
 }
 
 input {
+  font-family: vars.$label-font;
+  font-size: vars.$sm;
   border-radius: 3px;
   padding: 8px 0;
   border: 1px solid vars.$button;

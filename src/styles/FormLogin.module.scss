@@ -2,7 +2,7 @@
 
 .form {
   width: 300px;
-  height: 315px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,10 +14,11 @@
 
 .title-form {
   display: flex;
-  height: 20%;
+  height: 15%;
   justify-content: center;
   align-items: center;
   font-size: vars.$title;
+  margin: -5px;
 }
 
 .form_input {
@@ -51,6 +52,16 @@ button {
   cursor: pointer;
 }
 
-.signup {
-  color: black;
+.error_div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid vars.$button;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: vars.$background-error;
+}
+
+.error_p {
+  font-size: vars.$md;
+  color: vars.$white;
 }
