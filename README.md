@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# Form with React and Firebase ⚛
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+👨‍💻 Creación de un formulario para validar: integración de una base de datos con [Firebase](https://firebase.google.com/), [React](https://es.reactjs.org/) y [React Dom Router](https://reactrouter.com/en/main).
+
+## Script Disponible ⛓
+
+Una vez clonado el repositorio, es necesario instalar todas las dependencias utilizadas para su funcionamiento, debes ejecutar:
+
+👇👇
+
+### - `npm install`
+
+🚨 Instalas todas las dependencias. (Si te presenta un error, puedes instalar todos los paquetes de forma forzada. Eso sucede porque npm no reconoce la creación de la librería utilizada)
+
+## ¡Antes de iniciar el proyecto! 🛑
+
+👨‍🔧 Debes realizar unas configuraciones antes de inicar el proyecto, debido a que se utilizan API y necesitas tener autorización con las variables de entorno.
+
+- Te recomiendo leer la información requerida en [ipinfo](https://ipinfo.io/). ⚠
+
+- Te recomiendo leer la información requerida para poder utilizar el servicio de [Firebase](https://firebase.google.com/). ⚠
+
+Una vez ya realizada las configuraciones necesarias, puedes ejecutar el siguiente comando.
+
+👇👇
+
+### - `npm run start`
+
+Iniciará la aplicación en modo de desarrollo [http://localhost:3000](http://localhost:3000).
+
+## Manejo de los datos: 📚
+
+Una vez iniciado el proyecto, es necesario registrarte en la base de datos para poder iniciar sesión.
+
+Cuando el usuario se registra, los datos son almacenado en la tabla `users`
+
+[!database](https://res.cloudinary.com/juancms98/image/upload/c_scale,w_724/v1675566476/firebase_cloud_ahqgah.png)
+
+Y para validar si el usuario fue registrado con el proveedor de correo electrónico y contraseña.
+
+[!users](https://res.cloudinary.com/juancms98/image/upload/c_scale,w_665/v1675566476/firebase_auth_zkfzf7.png)
 
 ## Available Scripts
 
@@ -14,11 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -29,42 +62,22 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## ✌️ Follow me in my social networks:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Linkedin](https://www.linkedin.com/in/juancodev/) 🌏
+- [Twitter](https://twitter.com/juancodev_) 🌏
+- [Facebook](https://www.facebook.com/juancodev) 🌏
+- [Instagram](https://www.instagram.com/juancodev/) 🌏
+- [My Web site](https://juancodev.github.io/Portfolio/) 🌏
+
+  <img src="https://res.cloudinary.com/juancms98/image/upload/v1630885661/juancms98_yzbssj.png" width="700" heigth="700">
