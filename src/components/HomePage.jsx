@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import useWindowSize from 'react-use/lib/useWindowSize';
+import Confetti from 'react-confetti';
 import instagramIcon from '../assets/icons/icon-instagram.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
 import githubIcon from '../assets/icons/icon-github.svg';
 import styles from '../styles/HomePage.module.scss';
 
 const HomePage = () => {
-
+  const { width, height } = useWindowSize()
   const { user, logout } = useAuth();
   const logoutUser = async () => {
     await logout();
@@ -15,6 +17,11 @@ const HomePage = () => {
 
   return (
     <>
+      <Confetti
+        width={width}
+        height={height}
+        recycle={false}
+      />
       <div className=''>
         <div className={styles['title-container']}>
           <h1 className={styles['title-h1']}>
