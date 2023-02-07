@@ -9,13 +9,10 @@ import 'react-intl-tel-input/dist/main.css';
 import styles from '../styles/Form.module.scss';
 
 const Form = () => {
-  const [valueInput, setValueInput] = React.useState({
-    fullName: '',
+  const [inputMessage, setInputMessage] = React.useState({
     dni: '',
-    email: '',
-    password: '',
-    phoneNumber: '',
-  });
+    phone: '',
+  })
   const [data, setData] = React.useState();
 
   const auth = getAuth();
@@ -51,67 +48,68 @@ const Form = () => {
 
   const currentCountryFlag = useGetInfo(DOMAIN, TOKEN);
 
-  const newFullName = ({ target: { value } }) => {
-    setValueInput({
-      ...valueInput,
-      fullName: value
-    });
-  };
-
-  const newDni = ({ target: { value } }) => {
-    setValueInput({
-      ...valueInput,
-      dni: value
-    });
-  };
-
-  const newEmail = ({ target: { value } }) => {
-    setValueInput({
-      ...valueInput,
-      email: value
-    });
-  };
-
-  const newPassword = ({ target: { value } }) => {
-    setValueInput({
-      ...valueInput,
-      password: value
-    });
-  };
-
   const submit = (event) => {
     event.preventDefault();
-    setData({
-      name: event.target[0].value,
-      dni: event.target[1].value,
-      email: event.target[2].value,
-      password: event.target[3].value,
-      phone: event.target[4].value,
-    });
+    if (event.target[1].value.length < 7 || event.target[1].value.length > 9) {
+      setInputMessage({
+        ...inputMessage,
+        dni: 'Error: You have an incorrect id length',
+        phone: ''
+      });
+    } else if (event.target[4].value === '' || event.target[4].value.length < 9 || event.target[4].value.length > 11) {
+      setInputMessage({
+        ...inputMessage,
+        phone: 'Error: You have an incorrect phone length',
+        dni: ''
+      });
+    } else {
+      setInputMessage({
+        ...inputMessage,
+        dni: '',
+        phone: '',
+      });
+      setData({
+        name: event.target[0].value,
+        dni: event.target[1].value,
+        email: event.target[2].value,
+        password: event.target[3].value,
+        phone: event.target[4].value,
+      });
+    }
   };
-  console.log(data);
+
+
 
   return (
     <>
+      {((inputMessage.dni || inputMessage.phone) || (inputMessage.dni && inputMessage.phone)) && <div
+        className={styles['error_div']}
+      >
+        <p className={styles['error_p']}>
+          {inputMessage.dni}
+          {inputMessage.phone}
+        </p>
+      </div>}
+
       <form onSubmit={submit} className={styles.form}>
         <div className={styles['title-form']}>
           <p>REGISTER</p>
         </div>
         <div className={styles['form_input']}>
           <label htmlFor="fullName">FullName</label>
-          <input type="text" id='fullName' value={valueInput.fullName} onChange={newFullName} placeholder="Juan Montilla" required />
+          <input type="text" id='fullName' placeholder="Juan Montilla" required />
         </div>
         <div className={styles['form_input']}>
-          <label htmlFor="dni">DNI</label>
-          <input type="number" name="" id="dni" value={valueInput.dni} onChange={newDni} placeholder="20225488" required />
+          <label htmlFor="dni">ID</label>
+          <input type="number" id="dni" placeholder="20225488" required />
         </div>
         <div className={styles['form_input']}>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" value={valueInput.email} onChange={newEmail} placeholder="juancodev@example.com" required />
+          <input type="email" id="email" placeholder="juancodev@example.com" required />
         </div>
         <div className={styles['form_input']}>
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" value={valueInput.password} onChange={newPassword} placeholder="*********" required />
+          <input type="password" id="password" placeholder="*********" minLength='6' required />
         </div>
         <div className={styles['form_input']}>
           <label htmlFor="phoneNumber">Phone Number</label>

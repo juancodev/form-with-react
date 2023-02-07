@@ -19,7 +19,7 @@ const FormLogin = () => {
       navigate('/');
       console.log('sign in');
     } catch (error) {
-      setError('Your error is: ' + error.code);
+      setError('Error: ' + error.code);
     }
   };
 

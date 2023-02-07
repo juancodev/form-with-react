@@ -54,6 +54,20 @@ button {
   cursor: pointer;
 }
 
+.error_div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid vars.$button;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: vars.$background-error;
+}
+
+.error_p {
+  font-size: vars.$md;
+  color: vars.$white;
+}
+
 @media (max-width: 640px) {
   .form {
     padding: 25px
