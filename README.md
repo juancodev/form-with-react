@@ -42,7 +42,7 @@ Una vez iniciado el proyecto, es necesario registrarte en la base de datos para 
 
 Cuando el usuario se registra, los datos son almacenado en la tabla `users`
 
-![database](https://res.cloudinary.com/juancms98/image/upload/c_scale,w_724/v1675566476/firebase_cloud_ahqgah.png)
+![database](https://res.cloudinary.com/juancodev/image/upload/c_scale,w_724/v1675566476/firebase_cloud_ahqgah.png)
 
 Y para validar si el usuario fue registrado con el proveedor de correo electrónico y contraseña.
 
